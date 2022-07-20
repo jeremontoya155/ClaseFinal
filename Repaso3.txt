@@ -1,0 +1,216 @@
+
+
+-----------------------------------------------
+-Cual es el objetivo de thread?
+Permitir variedad de funcionalidades agregando diferente flujos
+Aprovechar mas recursos de la pc 
+Favorecer al bajo acoplamiento y alta cohesion
+-------------------------------------------------------
+Manejo del equipo 
+
+TODOS TIENE QUE CERRAR CUANDOS SE ABREN ->close();
+TODOS TIENE QUE ESTAR ENTRE TRY CATCH ->Manejamos los IOEXCEPTION
+*********************************************************
+Archivos
+
+EJEMPLO
+
+TRASLADO DE IMAGEN ->Mover sus bytes
+caso de abstraccion mas basico previo  a FILES
+
+FileInputStream-> Dar lectura byte por byte a los elementos
+FileOutputStream->Da escritura byte por byte a los elementos
+
+
+ESTOS CASOS NO SE SUELEN USAR DEMASIADO
+DELEGACION DE TRASLADAR QUEDA EN EL PATH Y EN EL FILE
+PERO EL PRINCIPAL USO DE LOS FILEINPUTSTREAM Y OUTPUT ES SER LA CLASE 
+QUE SE USA PARA FORMAR LOS OBJECT
+
+
+******************************************
+
+Objetos->QUE EXTENSION TIENEN ?.dat
+LAS CLASES QUE VAMOS A GUARDAR DEBEN PODER SER SERIALIZABLES
+
+(PARA NO SERIALIZAR ALGO SE LE AGREGA EL transient)->NO SERIALIZAR UN CAMPO EN ESPECIFICO
+
+Por lo general como los buscamos de manera permanente o volatil ?
+SemiPermanente -> PORQUE NO SE MUERE EN LA RAM 
+
+El constructor necesita una instancia de
+
+FileInputStream-> Dar lectura byte por byte a los elementos
+FileOutputStream->Da escritura byte por byte a los elementos
+
+
+USAMOS
+
+ObjectInputStream->FileInputStream
+ObjectOutputStream ->FileOutputStream
+
+
+TAMBIEN HAY QUE MANEJAR APARTE DEL IOException 
+la clase ClassNotFoundException porque podemos retornar archivos de diferente tipos
+
+writeObject 
+readObject
+******************************************
+
+Texto
+
+CASOS SIMPLES
+
+FileReader ->Lector
+FileWriter ->Escritor
+
+Casos de lectura llevan el uso del metodo read
+
+
+Casos de escritura el write
+
+SE TERMINA LA LECTURA CUANDO LLEGAMOS A UN $
+COMPROBAR CARACTER A CARACTER
+
+******************************************
+CASOS COMPUESTOS
+
+
+FileReader ->Lector
+FileWriter ->Escritor
+
+
+EL BUFFER PARA LA MEMORIA INTERMEDIA Y EVITAR ERRORES
+
+BufferedReader(fr)
+BufferedWriter(fw)
+
+DIFERENCIA
+PODEMOS LEER LINEA A LINEA NO CARACTER A CARACTER
+
+SIEMPRE TENER EN CUENTA EL USO DE MAPEOS Y COMPLETAR LOS TO STRING A LAS CLASES QUE USEMOS
+
+******************************************
+Directorios(Principalmente)
+
+File 
+
+Sintaxis
+Conlleva un constructor simple con la ruta
+
+Y el principal uso que se le da es el recorrido dentro de los objetos de nuestros directorios
+de manera completa usando recursividad y viendo que hay dentro de cada directorio interno 
+
+
+EXTRAS
+
+ver si las rutas eran absolutas o relativas
+
+asi como tambien podemos usar los separator para homologar cualquier caso de uso 
+en el sistema operativo que sea 
+
+SINTAXIS DEL FILE SEPARATOR
+
+"Contenido"+File.separator+"Contenido"
+
+asi hasta el cierre SIEMPRE CERRAMOSA CON CONTENIDO 
+
+contenido refiere a cualquier carpeta/archivo en general 
+************************
+---------------------------------------------------------
+
+
+Que es lo que nos permite el JAVA NIO2
+
+******************************
+
+EXITENCIA->Files.exist(path,extra)
+Sintaxis
+boolean nombre = Files.Exists(path, new LinkOption[]{LinkOption.NOFOLLOW_LINKS});
+
+//EVITA LA BUSQUEDA DE LOS ACCESOS DIRECTOS  NOS PERMITE SOLO VER ARCHIVOS COMPLETOS 
+LinkOption[]{LinkOption.NOFOLLOW_LINKS}
+
+
+
+******************************
+
+
+
+CREAR->Files.create(archivo/directorio)
+
+
+            Files.createFile(p);->Caso de crear archivo
+
+
+            Files.createDirectory(p);->Caso de creacion de un directorio
+
+******************************
+
+Verificar antes la existencia 
+
+BORRAR->Files.delete(Path)
+
+******************************
+
+COPIAR ->Files.copy(PathOrigen,Pathdestino) SIEMPRE DEBE COINCIDIR EL MISMO TIPO DE DATO CON EL QUE TRABAJO
+
+
+MOVER ->Files.move(PathOrigen,PathDestino,StandardCopyOption.REPLACE_EXISTING);mueve un archivo de un path origen a otro destino eliminado de la carpeta el de su origen 
+
+
+
+******************************
+
+
+
+
+*Extras
+
+normalize()-> nos eliminaba las redundancias
+resolve()->  para hacer un agregado
+subpath()->  Crea un path a partir de otro con un x e y como guias las mismas no incluyen los extremos
+y no se cuenta la carpeta de origen 
+
+ejemplo
+	
+  p1	
+	
+
+ p1.resolve(p2) entonces nos deja las direccione en combinado si es que se continuan
+	
+
+
+ p1 D:/0/1/2/3/4/5
+	
+ Path p3=p1.subpath(x,y);
+ x=1
+ y=4	
+	
+ p3 :/1/2/3	
+	 	
+*********************************
+------------------------
+
+Errores
+
+IOException y ClassNotFoundException SIEMPRE LOS ENVOLVEMOS 
+
+NullPointerException no lo podemos captar estos son no registrables
+pasan por el error dentro de  las posiciones de la PC en el NIO2 Con el path
+
+CASOS VISTOS 
+
+throws nos va a dar la derivacion/delegar para que nosotros empleemos las acciones con las clases subsiguientes
+es decir va a reasignar el deber de tomar un error 
+
+Los errores que se presentan los captamos en un stack 
+que viene a ser la salida en blanco por pantalla con las lineas del error
+de manera que lo captamos con el printStackTrace()
+siempre nos corresponde agregarle la sentencia System.out a la misma para indicar que 
+nosotros debemos de darle una salida a la ejecucion que tomamos
+
+
+
+
+

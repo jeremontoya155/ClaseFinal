@@ -1,0 +1,8 @@
+clases\HiloEnvio.class
+clases\HiloRecepcion.class
+clases\Persona.class
+test\testHilo.class
+DAO\Conexion.class
+test\test.class
+Interfaces\DAOPersona.class
+DAO\DAOPersonaImp.class

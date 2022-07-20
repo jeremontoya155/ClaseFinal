@@ -1,0 +1,121 @@
+Repaso General 
+
+------------------------------------------------
+Tipos de datos
+
+int
+long
+byte 2***7 y  2**-7
+char
+boolean 
+double
+float
+
+Clase Principales
+
+String 
+
+ 
+
+-------------------------------------------------
+Diferenecia entre error de compilacion  y error de ejecucion
+
+------------------------------------------------
+Valores que no podemos recibir como variables (_,$)
+CamelCase
+
+Snake_case
+
+---------------------------------------------------
+metodos estaticos y no estaticos
+
+
+--------------------------------------------
+
+operadores
+
+relacionales 
+
+==
+>=
+<=
+!=
+
+aritemticos
+++
+--
+
+condicionales
+||
+&&
+-------------------------------------------------
+
+Caracteristicas generales POO
+
+Stack y heap 
+
+-----------------------------------------------
+Uso de genericos
+
+T,E cualqueir tipo de dato, la idea es usar el T para cualquier clase creada (correponde E:elemento,T:Objeto)
+
+
+V Clave
+K Valor
+
+-------------------------------------------------
+Collection
+
+Tenemos las colecciones de los tipos
+
+List-> ArrayList -> LinkedList
+
+
+
+Set->Hash y Tree
+
+
+Map -> HashMap
+
+Difrenecia del map con el put y el containKey y value
+
+
+Aclracion de los stream
+
+
+Metodos del collection?
+
+toArray
+
+Caso del iterator
+
+
+
+------------------------------
+Expresiones regulares
+
+
+[] Nostros anotamos el valor valores o continuadad que querramos buscar
+[^] NO QUEREMOS
++ Concatenacion espcifica debe estar si o si 
+^ Inicio del texto
+$ Final del texto
+{n} cantidad n de repeticiones de un valor 
+?   puede o no estar y solo se permite una vez
+*   puede o no estar pero no solo debe estar una vez
+
+
+--------------------------------------------------
+
+
+
+------------------------------------------------
+List<>
+--------------------------------------------------
+
+CRUD
+
+
+----------------------------------------------------
+DAO
+

@@ -1,0 +1,92 @@
+-------------------------------
+Formas de hacer un thread
+Agrgar varios hilos/ramificacion para las opciones que se estan presentando
+
+
+Extendiendo del thread
+
+o implementando Runnable 
+
+Vemos ejemplo con el netbeans 
+synchronized (args) {}
+
+
+aclaracion del wait();
+args.wait();
+
+InterruptedException()
+
+
+------------------------------------
+Vemos la implementacion del Locale para la documentacion 
+
+
+
+      Properties props = System.getProperties();
+      props.put("user.language", "ja");
+      props.put("user.region", "JA");
+      System.setProperties(props);
+
+      Locale aLocale = Locale.getDefault();
+      System.out.println(aLocale.toString());
+
+      aLocale = new Locale("fr", "FR");
+      Locale.setDefault(aLocale);
+      System.out.println(aLocale.toString());
+
+
+http://www.w3api.com/Java/Locale/
+
+----------------------------------------
+
+----------------------------------------
+Cuales son las caracteristicas del jdbc?
+-Permite la conexion directa a las fuentes de datos que querramos
+-Permite interactuar enviando consultas  y recibiendo data de una base 
+-Nos sirve en la guia de los patrones MVC(Modelo vista controlador)
+*Vista :=>Interfaz usuario
+*Control=>Interacciones
+*Modelo=>Base Datos
+
+----------------------------------------
+Tipos de  datos que tenemos en SQL 
+
+Bit
+Char
+DateTime (Formato fecha)
+Decimal
+Numeric
+Float
+Varchar
+Enum(dos opciones)
+Int numerico
+Full(fecha completa)
+
+------------------------
+
+Consultas del DDL
+Data Definition Lenguage
+
+
+consultas del DML
+Data Manipulation Lenguage
+
+Caso de uso ?
+Para que nos servian los join?
+marco Fork-join 
+que hace consultas para elementos interelacionados entre tablas
+
+
+-------------------------
+En que caso era preferible usar el Update?
+
+Como correspondia poner el orden para el execute del Query y Update 
+---------------------------
+Repasamos una conexion con los dos casos desde cero 
+
+Se elige un objeto aleatorio para cargar y hacer tanto la recepcion como 
+el envio de la base de datos 
+
+
+
+

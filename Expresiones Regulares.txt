@@ -1,0 +1,119 @@
+Expresiones regulareas
+Conjunto de formulas especificas para la busqueda por caracteres
+Sirve para hacer las validaciones que querramos
+de patrones especificos
+
+VEMOS SIEMPRE IR LINEAL EN CRECIMIENTO
+
+https://regexr.com/
+
+
+Jeremontoya1555@gmail.com
+3516139362
+
+Lorem ipsum dolor sit amet,
+ consectetur adipiscing elit.
+ Maecenas libero arcu, sodales
+ ac rhoncus eget, scelerisque 
+ eu nunc. Quisque ullamcorper
+ lobortis lorem. Donec augue nunc,
+  elementum vel dui id, vulputate 
+ luctus ipsum. In tincidunt sit amet
+  velit vel tincidunt. Mauris dictum 
+ id orci ac tincidunt. Aenean ultrice
+ s tincidunt eros, ut blandit orci
+  feugiat nec. Nullam finibus congu
+ e neque. Integer ullamcorper, sapien 
+ non mollis tempus, nisi velit aliquam 
+ nulla, a imperdiet diam nibh
+ vel exementum.
+ Nulla pulvinar sollicitudin risus,
+ id laoreet metus viverra a.
+3516139362
+
+
+
+Coincidencias Basicas
+.       - Cualquier Caracter, excepto nueva linea
+letra   - Cualquier ubicacion de esa letra 
+\d      - Cualquier Digitos (0-9)
+\D      - No es un Digito (0-9)
+\w      - Caracter de Palabra (a-z, A-Z, 0-9, _)
+\W      - No es un Caracter de Palabra.
+\s      - Espacios de cualquier tipo. (espacio, tab, nueva linea)
+\S      - No es un Espacio, Tab o nueva linea.
+
+Limites
+\b      - Limite de Palabra
+\B      - No es un Limite de Palabra
+^       - Inicio de una cadena de texto
+$       - Final de una cadena de texto
+
+Cuantificadores:
+*       - 0 o Más
++       - 1 o Más
+?       - 0 o Uno
+{3}     - Numero Exacto
+{3,4}   - Rango de Numeros (Minimo, Maximo)
+
+Conjuntos de Caracteres
+[]      - Caracteres dentro de los brackets
+[^ ]    - Caracteres que NO ESTAN dentro de los brackets
+
+Grupos
+( )     - Grupo
+|       - Uno u otro
+
+
+
+
+EJEMPLO PARA VALIDAR UN NOMBRE
+
+^(\D\w)+\s?\w+?$
+
+
+Ejemplo para buscar un numero
+
+^\d{2}\s?\d{3}\s\d{7}$
+
+Ejemplo de solo las minusculas
+[a-z]+
+
+Ejemplo para solo las letras
+[a-zA-Z]
+
+De cierto rango de numero
+[0-5]
+
+Invertir todo lo que no se encuentre en la lista
+[^a-zA-Z]
+
+
+Buscar numeros con determinado inicio
+
+(351|353)+\d{7}
+
+
+
+
+vemos el ejemplo de validacion de un dni y un nombre 
+
+Validar un nombre y un dni 
+
+El DNI VA  A SER UN INGRESO EN STRING 
+QUE TIENE 8 DIGITOS Y TERMINA CON  M o F
+
+^ Marca inicio 
+$ Marca final
++ aclaramos que puede o no estar , es mas de una ocasion
+
+[] ->Entre que cosas queremos analizar
+
+[0-9] ->Ejemplo vemos la longitud
+
+{} indica la cantidad de repeticiones
+{} ejemplo para las repeticiones
+[A-Z] ejemplo nos deja ver margen/alcanze de la letras
+
+
+

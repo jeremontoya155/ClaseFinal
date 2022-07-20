@@ -1,0 +1,15 @@
+0)Ejecutarlo si o si todos los pasos 
+subrecorrido y submenu
+
+1)Comparable y Comparator(Comparable solo caso numerico)
+
+2)BF Writer (map)
+
+3)ObW 
+
+4)5)Correspondientes Reader para cada clase 
+
+6)fore normal que retorne una persona (en caso de no recibir retonarmos persona vacia y sout de un mensaje)
+
+
+
